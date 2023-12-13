@@ -1,0 +1,26 @@
+{
+  "name": "mocha-chai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './specs/**/*.spec.js'",
+    "test1": "mocha './TEST/specs/**/*.spec.js'",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test",
+    "coverage1": "nyc --reporter=lcov --reporter=text npm run test1"
+  },
+  "nyc": {
+    "include": "src",
+    "exclude": "specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1"
+  }
+}
